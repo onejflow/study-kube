@@ -100,3 +100,18 @@ kubectl -n kubernetes-dashboard get pods -o wide
 # metrics-server 동작 여부
 kubectl top nodes   # 에러 없이 나오면 metrics-server OK
 ```
+
+## 대시보드 접근
+
+30000 포트로 접근
+
+
+Todo 
+
+echo "======== [9-2] Dashboard 설치 ========"
+kubectl apply -f https://raw.githubusercontent.com/k8s-1pro/install/main/ground/k8s-1.27/dashboard-2.7.0/dashboard.yaml
+
+echo "======== [9-3] Metrics Server 설치 ========"
+kubectl apply -f https://raw.githubusercontent.com/k8s-1pro/install/main/ground/k8s-1.27/metrics-server-0.6.3/metrics-server.yaml
+
+추후 해당 부분은 실습용 yaml이 아닌 내가 직접 작성하기
